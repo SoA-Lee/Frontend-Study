@@ -1,0 +1,12 @@
+<style>
+  div {
+    color: red;
+    margin: 20px;
+  }
+</style> <= 내장방식. 내용으로 스타일을 작성하는 방식
+
+<div style="color: red; margin: 20px;"></div> <=인라인 방식. 요소의 style 속성에 직접 스타일 작성(html)
+
+<link rel="stylesheet" href="./css/main.css"> <=링크 방식. 외부 css문서를 가져와서 연결하는 방식
+
+@import 방식도 있음. html<-c에서 c가 다른 c연결도 이어줌.
