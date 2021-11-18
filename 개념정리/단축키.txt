@@ -6,3 +6,5 @@
 아래에 줄 복사 : Alt + Shift + Down
 내어쓰기 : Shift + Tab
 주석처리 : Ctrl + /
+beautify : alt+ctrl+l
+명령창 : Ctrl+shift+p

@@ -1,0 +1,22 @@
+.box{
+  width: 100px;
+  height: 100px;
+  background: orange;
+}
+
+.box:hover{
+  width: 300px;
+  background: orchid;
+}
+
+.box:active{
+  height: 50px;
+  background: palegreen;
+}
+
+input{
+ 
+}
+input:focus{
+  background: purple;
+}

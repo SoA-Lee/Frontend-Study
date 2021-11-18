@@ -1,20 +1,10 @@
-.box{
-  width: 100px;
-  height: 100px;
-  background: orange;
-  transition: 1s;
+div{
+  color: red;
+  font-size: 50dp;
 }
-
-.box:hover{
-  width: 300px;
-  background: royalblue;
+.aqua{
+  color: aqua;
 }
-
-.box:active{
-  height: 50px;
-  background: slateblue;
-}
-
-input:focus{
-  background-color: orange;
+span#abc{ /*복합_일치 선택자 = 동시 만족*/
+  font-style: italic;
 }
