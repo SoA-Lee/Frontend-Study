@@ -27,3 +27,6 @@ html 문서 내 script 태그를 통해 사용 가능.
 ABC:hover =>가상클래스 선택자. 선택자 ABC 요소에 마우스 커서가 올라가 있는 동안 선택
 ABC:active =>가상클래스 선택자. 선택자 ABC 요소에 마우스 커서로 클릭하고 있는 동안 선택
 ABD:focus =>가상클래스 선택자. 선택자 ABC 요소에 포커스 되면 선택 <=input요소 같은 경우에만 가능
+------------------------------------------------------------------------------------------------------
+ABC:first-child => 선택자 ABC가 형제 요소 중 첫째라면 선택.
+EX) .fruits div:first-child .fruits span:last-child .fruits *:nth-child(2) .fruits *:nth-child(2n) .fruits *:not(span)
