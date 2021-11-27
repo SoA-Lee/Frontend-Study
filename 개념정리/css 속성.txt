@@ -1,0 +1,23 @@
+| margin = 요소의 외부 여배을 지정하는 단축 속성 (top, right, bottom, left 순서)
+가로(세로) 너비가 있는 요소의 가운데 정렬에 활용! => 음수 사용 가능
+
+| padding = 요소의 내부 여백을 지정하는 단축 속성 (요소의 크기가 커진다) <- 내부여백 생겨서
+
+| border 테두리선 (border: 선-두께 선-종류 선-색상)
+ dashed/dotted/solid. transparent. 색상
+| border-radius 둥글게 모서리 (border-raidus : 0 10px 0 0;) 한쪽만 둥글게 됨
+
+| box-sizing 크기 계산 기본 값 border-box로 입력하면 패딩커쳐도 크기 안커짐
+| overflow : 요소의 크기 이상으로 내용이 넘쳤을 때, 보여짐을 제어하는 단축 속성
+(auto : 넘친 내용이 있는 경우에만 잘라내고 스크롤바 생성/hidden : 넘친 내용 잘라냄)
+| display : 요소의 화면 출력 특성 (block, inline, inline-block, flex, grid, none, 기타)
+| opacity : 요소 투명도
+| line-height : 줄간격 => 권장하는 단위 (배수)
+| font : color, font-size, text-decoration(밑줄), text-align(center중앙정렬), text-indent(문장 첫 줄 들여쓰기)
+
+| 배경 background-image:url("경로") / background-size (배경에맞춰 사진크기 조절/cover,contain) / background-repeat : no-repeat / background-position : center (top right 오른쪽 위)
+        background-attachment 요소의 배경이미지 스크롤(scroll, fixed화면에 배경 고정) 
+
+| 배치 (position-relative(요소 자신 기준), absolute(*위치 상* 부모 요소 기준), fixed(뷰포트,브라우저 기준), static: 아무값도 안가짐)
+부모{position : relative;}
+자식{right :10px botton :10px} 하면 부모 클래스 안에서 상대적으로 위치함
