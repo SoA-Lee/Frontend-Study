@@ -18,6 +18,20 @@
 | 배경 background-image:url("경로") / background-size (배경에맞춰 사진크기 조절/cover,contain) / background-repeat : no-repeat / background-position : center (top right 오른쪽 위)
         background-attachment 요소의 배경이미지 스크롤(scroll, fixed화면에 배경 고정) 
 
-| 배치 (position-relative(요소 자신 기준), absolute(*위치 상* 부모 요소 기준), fixed(뷰포트,브라우저 기준), static: 아무값도 안가짐)
+| 배치 (position-relative(요소 자신 기준), absolute(*위치 상* 부모 요소 기준), fixed(뷰포트,브라우저 기준->배치기준밖여서 주변 요소와 상호작용 안함), static: 아무값도 안가짐)
 부모{position : relative;}
 자식{right :10px botton :10px} 하면 부모 클래스 안에서 상대적으로 위치함
+-> span 태그에 position 값(absolute, fixed)을 줄 경우 block요소가 된다.
+
+| 요소 쌓임 순서(어떤 요소가 사용자와 더 가깝게 있는지)
+1. 요소에 position 속성의 값이 있는 경우 위에 쌓임(기본값 static 제외)
+2. 1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.
+3. 1번과 2번 조건까지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임.
+
+| flew-wrap 줄바꿈
+| justify-content : center 가운데 정렬
+| 그냥 width 사용시 요소 잘림 -> max-width 사용 (퍼지는 정도를 제한함)
+| transform(skewX 변환효과 기울임 X축 도 deg) / translateX 땡겨올 수 잇음
+| transition : 변화속도(transform 해당 속성만 변화줄수있음)
+
+| . class명 적고 탭키 누르면 div 자동 생성
