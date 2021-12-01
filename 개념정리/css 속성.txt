@@ -28,8 +28,34 @@
 2. 1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임.
 3. 1번과 2번 조건까지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임.
 
-| flew-wrap 줄바꿈
-| justify-content : center 가운데 정렬
+.container 만들기
+| 플렉스(정렬)_flex container(부모요소) /flex items (자식요소)
+  display : flex (수평정렬) / inline-flex
+  flex-direction(주축 설정) : row, row-verse, column, column-reverse
+| flex-wrap 줄바꿈 -> 컨테이너 넘치려는걸 줄바꿈 찌그러지지 않음.
+| justify-content : 주 축의 정렬 방법(flex-start, flex-end, center)
+| align-content : 교차 축의 여러 줄 정렬 방법(stretch, flex-start,flex-end,center)
+
+flex items
+| order : flew-item의 순서
+| flex-grow : flew item의 증가 너비 비율 (0 증가비율없음/ 숫자 증가비율)
+| flex-shrink : flex item의 감소 너비 비율(1 flex container너비에 따라 감소비율 적용, 숫자 감소비율)
+| flex-basis : flex item의 공간 배분 전 기본 너비(auto 요소의 content너비, 단위 px,em,rem)
+
+transition : 속성명 지속시간 타이밍함수 대기시간(요소의 전환효과를 지정)
+| transition-property : 전환효과를 사용할 속성이름 지정(all. 모든 속성, 속성이름)
+| transition-duration : 전환효과의 지속시간 지정(0s 전환효과없음, tlrks)
+| transition-timing-function : 전환 효과의 타이밍(easing)함수 지정 (ease, linear, ease-in,ease-in-out 등)
+| transition-delay : 전환효과가 몇 초 뒤에 시작할지 대기 시간 지정
+
+transform : rotate(45deg)각도 scale(1.3) 몇배 커짐
+1. 2D 변환함수(translate, scale, rotate, skewX, skewY)
+2. 3D 변환함수(rotateX, rotateY, perspective(n)원근법) -> perspective 함수는 대상에게 적용
+
+perspective 속성은 부모에게 적용 (보는 중점이 부모대상에서 바라보는 것임)
+
+| backface-visibility : 3D 변환으로 회전된 요소의 뒷면 숨김 여부
+
 | 그냥 width 사용시 요소 잘림 -> max-width 사용 (퍼지는 정도를 제한함)
 | transform(skewX 변환효과 기울임 X축 도 deg) / translateX 땡겨올 수 잇음
 | transition : 변화속도(transform 해당 속성만 변화줄수있음)
