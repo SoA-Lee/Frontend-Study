@@ -1,0 +1,19 @@
+| let 값(데이터) 재할당 가능
+| const 재할당 불가능
+
+| 예약어 : 특별한 의미를 가지고 있어, 변수나 함수 이름 등으로 사용할 수 없는 단어 (this, if, break)
+| 함수 : function sum(a,b) {return a+b;} <-기명함수 / 이름없을 경우 익명함수 let world = function(){}
+
+| 객체 데이터 const dalgorithm = {name: 'moon', age = 100, (메소드)getName: function(){return this.name;}}
+                 const herName = dalgorithm.getName();
+
+| DOM API <script defer src="./main.js"></script> 정보를 나타내는 스크립트태그는 헤드에있어야함.
+ let boxEl = document.querySelector('.box'); => html 요소찾기
+ console.log(boxEl);
+ boxEl.addEventListener('click',function(){ console.log('Click!!'); boxEl.classList.add('active')
+ console.log(boxEl.classList.contains('active')); })
+
+| 메소드 체이닝
+split : 문자를 인수 기준으로 쪼개서 배열로 반환
+reverse : 배열을 뒤집기
+join :  배열을 인수 기준으로 문자로 병합해 반환
