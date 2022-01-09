@@ -1,0 +1,13 @@
+git branch 관리
+
+- git remote add origin 
+- git branch
+- git branch -a 확인
+- git branch 이름 : 새로 만들기
+- git checkout 이름 : 브랜치 변경
+- git status 확인
+- git reset --hard HEAD~1 : 1(갯수)개 커밋 이전으로
+- git reset --hard ORIG HEAD : 이전 명령 되돌리기
+- git branch -d 이름 : 브랜치 삭제
+- git checkout -r : 원격저장소 브랜치 확인
+- git checkout -t origin/이름 : 원격저장소 변경
