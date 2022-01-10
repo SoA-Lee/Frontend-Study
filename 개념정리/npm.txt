@@ -1,0 +1,12 @@
+1. npm init -y
+2. npm install parcel-bundler -D (개발용 의존성 패키지_개발단계에서만 필요)
+3. npm install lodash (일반 의존성 패키지_웹브라우저에서 동작)
+4. ** npm i **
+5. package.json 파일 scripts에 dev : 추가
+6. npm run dev
+7. "scripts": {
+    "dev": "parcel index.html", =>로컬에서 개발용으로 서버를 여는 명령
+    "build": "parcel build index.html" => 사용자들이 보는 결과물
+  }
+8. npm run build (dist&cache 웹브라우저가 보는 용도/난독화)
+9. npm info/install @/update -> ^있어야 바뀜
