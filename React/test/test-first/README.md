@@ -1,15 +1,15 @@
-# npm install -g yarn
+1. npm install -g yarn 
 
-# yarn create react-app do-it-example --scripts-version 2.1.7
+2. yarn create react-app 'name' --scripts-version 2.1.7
 
-# yarn start : Starts the development server
+3. yarn start : Starts the development server
 
-# yarn build : Bundles the app into static files for production
+4. yarn build : Bundles the app into static files for production
 
-# yarn test : Starts the test runner
+5. yarn test : Starts the test runner
 
-# yarn eject : Removes this tool and copies build dependencies, configuration files and scripts into the app directory. Can’t go back!
+6. yarn eject : Removes this tool and copies build dependencies, configuration files and scripts into the app directory. Can’t go back!
 
-# cd do-it-example
+7. cd 'name'
 
-# yarn start
+8. yarn start
