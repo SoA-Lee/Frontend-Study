@@ -1,4 +1,21 @@
 import random from './getRandom'
+// 구조 분해 할당
+// 비구조화 할당
+const user = {
+  name : 'Dalgorithm',
+  age : 24,
+  email : 'abcd@gmail.com',
+  address : 'USA'
+}
+const {name : dalgo, age, address = 'KOREA'} = user
+
+console.log(`사용자의 이름은 ${dalgo}입니다.`)
+console.log(`${dalgo}의 이메일 주소는 ${user.email}입니다.`)
+console.log(address)
+
+const fruits = ['Apple', 'Banana', 'Cherry']
+const [, b] = fruits
+console.log(b) //banana 출력
 
 // 변수 유효범위
 // let, const 블록레벨
