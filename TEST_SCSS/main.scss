@@ -1,7 +1,24 @@
-$color: royalblue;
+$color: royalblue; /* 유효범위 활성화, const 사용 가능 */
 
-.container {
-  h1 {
-    color: $color;
+.container { /* & => 상위선택자 참조, 치환. 해당 범위에 있는 선택자*/
+  ul{
+    font: { /* 중첩 속성 */
+      weigt: bold;
+      size: 30px;
+      family: sans-serif;
+    };
+    li{ 
+      .name{
+        $size: 50px;
+        color: $color;
+        margin: (30px / 2); /* 산술 연산 시, 괄호 필요 + 동일한 단위 */
+        padding: $size % 7; /* 변수 사용 시, 괄호 X */
+      }
+    }
+    li{
+      .age{
+        color: orchid;
+      }
+    }
   }
 }
