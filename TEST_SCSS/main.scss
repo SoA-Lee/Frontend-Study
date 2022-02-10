@@ -1,6 +1,13 @@
+@mixin center($size) {
+  width: $size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 $color: royalblue; /* 유효범위 활성화, const 사용 가능 */
 
 .container { /* & => 상위선택자 참조, 치환. 해당 범위에 있는 선택자*/
+  @include center(200px); /* 재활용 mixins */
   ul{
     font: { /* 중첩 속성 */
       weigt: bold;
@@ -9,6 +16,7 @@ $color: royalblue; /* 유효범위 활성화, const 사용 가능 */
     };
     li{ 
       .name{
+        @include center(200px);
         $size: 50px;
         color: $color;
         margin: (30px / 2); /* 산술 연산 시, 괄호 필요 + 동일한 단위 */
@@ -17,6 +25,7 @@ $color: royalblue; /* 유효범위 활성화, const 사용 가능 */
     }
     li{
       .age{
+        @include center(100px); 
         color: orchid;
       }
     }
