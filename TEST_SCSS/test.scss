@@ -1,0 +1,46 @@
+/* 반복문 */
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) { // 선택자 위체 => 보간
+    width: 100px * $i;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content; // mixin 추가 내용 넣기 위해 사용
+}
+ /* 함수 */
+@function ratio($size, $ratio) {
+  @return $size * $ratio
+}
+
+$map: (
+  o: orange,
+  r: royalblue,
+  y: yellow
+);
+
+@each $k, $v in $map { // each 문
+  .container-#{$k} {
+    color: $v;
+  }
+}
+
+.box {
+  $color : royalblue;
+  $width : 100px;
+  width: $width;
+  height: ratio($width, 1/2);
+  @include center {
+    bottom: 0;
+    margin: auto;
+  };
+  &.built-in {
+    background-color: mix($color, red); // 색상내장함수 - 혼합
+  }
+  &.built-out {
+    background-color: invert($color); // 색상내장함수 - 반전
+  }
+}
