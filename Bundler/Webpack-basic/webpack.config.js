@@ -1,6 +1,7 @@
 // import
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // export
 module.exports = {
@@ -16,10 +17,29 @@ module.exports = {
     filename: 'main.js',
     clean: true
   },
+
+  module: {
+    rules: [
+      {
+        test: /\.s?css$/, // .css로 끝나는 확장자 찾기 (? s가 있을 수도 있고 없을 수도 있다.)
+        use: [
+          'style-loader', // html에 css 삽입
+          'css-loader', // 먼저 해석. js에서 css 해석할 수 있도록 해줌
+          'sass-loader'
+        ]
+      }
+    ]
+  },
+
   // 번들링 후 결과물의 처리 방식 등 다양한 플러그인들 설정
   plugins: [
     new HtmlPlugin({
       template: './index.html'
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'static' } // static 폴더 안 구성물  -> 복사해서 dist로 들어갈 수 있도록 해줌
+      ]
     })
   ],
 
