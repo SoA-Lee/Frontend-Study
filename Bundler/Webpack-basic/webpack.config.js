@@ -25,6 +25,7 @@ module.exports = {
         use: [
           'style-loader', // html에 css 삽입
           'css-loader', // 먼저 해석. js에서 css 해석할 수 있도록 해줌
+          'postcss-loader', // 공급업체 접두사 적용
           'sass-loader'
         ]
       }
