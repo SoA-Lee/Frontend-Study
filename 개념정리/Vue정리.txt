@@ -1,0 +1,4 @@
+1. const app = Vue.creatApp({ /* options*/ }) 새로운 어플리케이션 인스턴스 생성
+2. Vue.creatApp({}).mount('#app') 
+3. App.Vue => 최상위컴포넌트(RootComponent)
+4. created 훅은 인스턴스가 생성된 후에 코드를 실행하는데 사용 (mounted, updated, unmounted 있)

@@ -32,7 +32,21 @@ export default {
     increase() {
       this.count += 1
     }
-  }  
+  },
+  beforeCreate() { // data 불러오기 안 됨
+    console.log('Before Create!', this.count)
+  },
+  created() { 
+    console.log('Created!', this.count)
+  },
+  beforeMount() { // html 구조 연결 전 단계
+    console.log('Before Mount!')
+    console.log(document.querySelector('h1'))
+  },
+  mounted() { // html구조 연결 및 조회 가능
+    console.log('Mounted!')
+    console.log(document.querySelector('h1'))
+  } 
 }
 </script>
 
