@@ -1,4 +1,5 @@
 <template>
+  <Fruits />
   <h1 
     v-once 
     @click="add">{{ msg }}
@@ -13,19 +14,22 @@
 </template>
 
 <script>
+import Fruits from '~/components/Fruits.vue'
+
 export default {
+  components: { Fruits },
   data() {
-    return {
-      msg : 'Hello World',
-      new : '<div style="color: red;">Hello!!</div>',
-      active : 'active',
-      event: 'click'
-    }
+      return {
+          msg: "Hello World",
+          new: "<div style=\"color: red;\">Hello!!</div>",
+          active: "active",
+          event: "click"
+      };
   },
   methods: {
-    add() {
-      this.msg += '!'
-    }
+      add() {
+          this.msg += "!";
+       }
   }
 }
 </script>
