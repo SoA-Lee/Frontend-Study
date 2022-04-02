@@ -2,10 +2,8 @@
   <section v-if="hasFruit">
     <h1>Fruits</h1>
     <ul>
-      <li 
-        v-for="fruit in fruits" 
-        :key="fruit">
-        {{fruit}}
+      <li >
+        {{fruit}} ?!
       </li>
     </ul>
   </section>
@@ -23,6 +21,12 @@
 
 <script>
 export default {
+  props: {
+    name: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
       fruits: ['Apple', 'Banana', 'Cherry']
